@@ -1,0 +1,57 @@
+Otsikko:
+Suomenkielinen käyttöliittymä
+
+Kuva:
+"C:\Users\hansk\MEGA\Documents\CS kuvat\guide.png"
+
+Kuvaus:
+Cities: Skylines suomeksi. Osittain valmis käännös.
+
+Suomenkielinen käyttöliittymä peliin. Tarkoitus kääntää ainakin sen verran, että pelitila on käytettävissä täysin suomeksi. Editorit myös myöhemmin.
+
+Muutama esimerkkikuva käännöksestä.
+https://imgur.com/a/GxT9WL0
+
+Testattu versiolla 1.11.0-f3.
+
+Asennus
+
+Lataa fi.zip -tiedosto ja pura (Google Drive -linkki).
+https://drive.google.com/open?id=10e-LjBomftKbwW02LGuqXebuXhawkVSa
+
+Tallenna fi.locale -tiedosto kansioon <asennuspolku>\Files\Locale.
+Esimerkiksi C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Files\Locale.
+
+Käynnistä peli -> Options - Gameplay - Language Setting - SUOMI (FINNISH)
+
+Ei vaadi uudelleenkäynnistystä. Pelin aikana kielen voi vaihtaa tarvittaessa lennossa takaisin englanniksi.
+
+Käännöksen edistyminen
+
+
+Käännetty (5165/10946 47%):
+Kaikki käyttöliittymäelementit, poislukien editorit ja näppäinasetukset.
+Kaikki pääohjeikkunat (Advisor).
+Kaikki tietonäkymät, paneelit, tilastot ja politiikat.
+Lähes kaikki kohteiden nimet (title).
+Lähes kaikki työkaluvihjeet (tooltip).
+Osa rakennusten ja propsien kuvauksista (desc, short desc).
+Osa skenaarioteksteistä (trigger).
+
+
+Kääntämättä - työn alla:
+Loput propsien nimet.
+Loput rakennusten ja propsien kuvaukset.
+Loput ohjeikkunat, eli Advisorin pienet ponnahdusviestit.
+Merkkipaalut -paneelin loput työkaluvihjeet.
+Loput skenaariotekstit.
+Editorit.
+Näppäinasetukset.
+Mitä uutta -paneeli.
+
+Kääntämättä - ei työn alla / ei ole tarkoitus kääntää:
+Chirpit. Liian monta käännettäväksi.
+Erisnimet, paikannimet, nimisäännöt. Muutama kauppa testiksi käännetty.
+Saavutukset/Achievements. Näitä ei ole Steamissakaan suomenkielisenä.
+Lauseke/Legal Disclaimer -tekstit.
+Credits/Tekijät.
