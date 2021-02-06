@@ -6,7 +6,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Files\Locale
 Käynnistä Launcher > Play > Options > Gameplay > valitse Language = SUOMI (FINNISH)
 
 # Kielitiedoston päivitys, kun pelistä on tullut uusi build
-Avaa run-as-admin PowerShell ja siirry Locale kansioon
+Avaa *Start-kuvakkeen päällä hiiren oikea > Windows PowerShell (järjestelmänvalvoja)* >  ja siirry Locale kansioon
 ```
 cd "C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Files\Locale"
 ```
@@ -16,6 +16,13 @@ Kopioi Locale kansioon nämä tiedostot
 CitiesSkylines_EN_1.3.1.exe
 fi.po
 sortpo.ps1
+```
+
+Esim PowerShellissä
+```
+Invoke-RestMethod "https://github.com/hanskurppa/csfi/blob/main/CitiesSkylines_EN_1.3.1.exe?raw=true" -OutFile CitiesSkylines_EN_1.3.1.exe
+Invoke-RestMethod "https://raw.githubusercontent.com/hanskurppa/csfi/main/sortpo.ps1" -OutFile sortpo.ps1
+Invoke-RestMethod "https://raw.githubusercontent.com/hanskurppa/csfi/main/fi.po" -OutFile fi.po
 ```
 
 Käynnistä Localization Tool
