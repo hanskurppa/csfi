@@ -45,10 +45,21 @@ Info Panel | tietoikkuna | object details
 Info Window | tietoikkuna | object details
 \* Panel | *-paneeli | main feature
  | | 
-Elementary School | Peruskoulu | 
-High School | Lukio | 
-University | Yliopisto | 
-Trade School | Ammattikoulu | 
+Elementary School | peruskoulu | 
+High School | lukio | 
+University | yliopisto | 
+Trade School | ammattikoulu | 
+Administration Building | päärakennus | 
+dormitory | asuntola | 
+Study Hall | lukusali | suomalaisissa kouluissa ja opistoissa kulkee myös nimellä "hiljainen huone" — "lukusali" on ehkä enemmän kirjastoissa
+Groundskeeping | viheryksikkö | hieman kankea
+Outdoor Study | viheraukio | epätyypillinen suomalaisissa kouluissa
+Gymnasium | liikuntarakennus | ehkä hieman kankea, mutta "kuntosali" tai "liikuntasali" kuvaavat suomenkielessä vain yhdenlaista liikuntaa
+Commencement Office | juhlasali | ei oikeasti sama asia, mutta suomenkielessä ei ole "valmistujaissaleja" tai -rakennuksia
+Media Lab | Media Lab | termiä käyttää Suomessa vain Aalto-yliopisto
+School of Engineering | Insinööritieteiden korkeakoulu | termiä käyttää Suomessa vain Aalto-yliopisto
+Liberal Arts | humanistiset tieteet | ei aivan sama asia suomenkielessä, mutta riittävän lähellä — tosin "Humanististen tieteiden laboratoriot" kuulostaa lähinnä eräältä Keski-Euroopan valtiolta 30-luvulla :S
+Futsal Club | pallokerho | oikeampi käännös olisi Futsal-kerho tai ehkä salijalkapallokerho, mutta pelkkä pallokerho kuulostaa paremmalta suomelta
  | | 
 Zone | vyöhyke | kaavoitettu tai asemakaavoitettu
 Area | alue | kaupunginosan tyyppi
@@ -63,11 +74,15 @@ route | reitti | AI Agent
 \* path | polku | pedestrian, in game
 \* depot | varikko | land vehicle
 \* depot | varustamo | air, water
-\* hub | keskus tai keskusasema | 
+\* hub | keskus, keskusasema tai matkakeskus | 
  | | 
 bus station | linja-autoasema | 
 bus line | bussilinja | 
 bus | bussi | vehicle
+ | |  
+trolleybus station | johdinautoasema | 
+trolleybus line | johdinautolinja | 
+trolleybus | johdinauto | vehicle
  | | 
 train track | junarata | 
 train line | junalinja | 
@@ -86,7 +101,7 @@ metro | metrojuna | vehicle
 
 # Muita huomioita
 Jos tulee *out of bounds error*, jostain löytyy liian pitkä käännös.  
-`fi_merged.po` tiedosto täytyy muuttaa `fi.locale` muotoon jotta sitä voi käyttää pelissä.  
+`fi.po` tiedosto täytyy muuttaa `fi.locale` muotoon jotta sitä voi käyttää pelissä.  
 Tähän voi käyttää sovellusta [Cities Skylines Localization Tool](https://forum.paradoxplaza.com/forum/threads/release-cities-skylines-localization-tool.844524/).  
 Samalla sovelluksella saa muutettua myös alkuperäisen `en.locale` tiedoston `en.po` tiedostoksi, kun tulee uusi peliversio.  
-`mergepo.ps1` skriptillä voi yhdistää uudet englanninkieliset kääntämättömät tekstit ja aiemmin käännetyt tekstit yhdeksi `fi_merged.po` tiedostoksi.
+`mergepo.ps1` skriptillä voi yhdistää uudet englanninkieliset kääntämättömät tekstit ja aiemmin käännetyt tekstit yhdeksi `fi.po` tiedostoksi.

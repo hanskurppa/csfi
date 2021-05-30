@@ -24,26 +24,23 @@
         klikkaa export > start
 
 
-    3. Kopioi purettu en.po tämän skriptin kansioon
-
-
-    4. Kopioi viimeisimmän suomikäännöksen po-tiedosto 
+    3. Kopioi viimeisimmän suomikäännöksen po-tiedosto 
        tämän skriptin kansioon tiedostoksi fi.po
 
        Jos löytyy vain fi.locale, voit purkaa sen kuten en.locale
 
 
-    5. Suorita tämä skripti
-       Skripti luo tiedoston fi_merged.po
+    4. Suorita tämä skripti
+       Skripti päivittää tiedoston fi.po sisällön
 
 
-    6. Tee uudet käännökset tiedostoon fi_merged.po
+    5. Tee uudet käännökset tiedostoon fi.po
 
 
-    7. Pakkaa päivitetty käännös tiedostoksi fi.locale
+    6. Pakkaa päivitetty käännös tiedostoksi fi.locale
         import
             origin locale = C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Files\Locale\en.locale
-            import pofile = fi_merged.po
+            import pofile = C:\<skriptinkansio>\fi.po
             export path = C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Files\Locale\fi.locale
             native text = SUOMI
             english text = (FINNISH)
@@ -113,7 +110,7 @@ $FiMsgCache = $fi.msg | ForEach-Object {@{"$_" = $cnt++}}
 $cnt = 0
 
 $FiMerged = foreach ($i in $en) {
-    Write-Progress -Activity "fi_merged.po [ $($cnt) / $($en.count) ]" -CurrentOperation $i.msg -PercentComplete ((($cnt++) / $en.count) * 100)
+    Write-Progress -Activity "fi.po [ $($cnt) / $($en.count) ]" -CurrentOperation $i.msg -PercentComplete ((($cnt++) / $en.count) * 100)
 
     $FiMsg = $null = $fi[$($FiMsgCache."$($i.msg)")]
 
@@ -134,18 +131,20 @@ $FiMerged = foreach ($i in $en) {
     }
 }
 
+# Varmuuskopioidaan olemassa oleva
+Move-Item (Join-Path $PSScriptRoot "fi.po") (Join-Path (Join-Path $PSScriptRoot "pobackup") "fi_$((Get-Date).Ticks.ToString()).po")
+
+# Päivitetään fi.po tiedoston sisältö
+foreach ($i in $FiMerged) {
+    "#. ""$($i.msg)""`nmsgid ""$($i.msgid)""`nmsgstr ""$($i.msgstr)""" | Out-File -Force -Append -Encoding utf8 -FilePath (Join-Path $PSScriptRoot "fi.po")
+}
+
 $DoneCnt = $FiMerged.count - ($FiMerged | Where-Object msgstr -eq '').count
 $AllCnt = $FiMerged.count
 $DonePct = [math]::round($DoneCnt/$AllCnt*100, 0)
+$SearchRegex = "## Käännetty \(.+\)"
+$ReplaceString = "## Käännetty ($DoneCnt/$AllCnt $DonePct%)"
 
-Write-Output "$DoneCnt/$AllCnt $DonePct%"
-
-# Varmuuskopioidaan olemassa oleva
-if (Test-Path (Join-Path $PSScriptRoot "fi_merged.po")) {
-    mkdir (Join-Path $PSScriptRoot "pobackup") -ea 0 -wa 0 | Out-Null
-    Move-Item (Join-Path $PSScriptRoot "fi_merged.po") (Join-Path (Join-Path $PSScriptRoot "pobackup") "fi_merged_$((Get-Date).Ticks.ToString()).po")
-}
-
-foreach ($i in $FiMerged) {
-    "#. ""$($i.msg)""`nmsgid ""$($i.msgid)""`nmsgstr ""$($i.msgstr)""" | Out-File -Force -Append -Encoding utf8 -FilePath (Join-Path $PSScriptRoot "fi_merged.po")
-}
+#(Get-Content -Encoding utf8 -Path (Join-Path $PSScriptRoot "README.md")) |
+#    ForEach-Object {$_ -Replace $SearchRegex, $ReplaceString} |
+#        Set-Content -Encoding utf8 -Path (Join-Path $PSScriptRoot "README.md")
