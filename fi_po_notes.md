@@ -85,8 +85,8 @@ metro line | metrolinja |
 metro | metrojuna | vehicle
 
 # Muita huomioita
-Jos tulee *out of bounds error*, jostain löytyy liian pitkä käännös.
-`fi_merged.po` tiedosto täytyy muuttaa `fi.locale` muotoon jotta sitä voi käyttää pelissä.
-Tähän voi käyttää sovellusta (Cities Skylines Localization Tool)[https://forum.paradoxplaza.com/forum/threads/release-cities-skylines-localization-tool.844524/].
-Samalla sovelluksella saa muutettua myös alkuperäisen `en.locale` tiedoston `en.po` tiedostoksi, kun tulee uusi peliversio.
+Jos tulee *out of bounds error*, jostain löytyy liian pitkä käännös.  
+`fi_merged.po` tiedosto täytyy muuttaa `fi.locale` muotoon jotta sitä voi käyttää pelissä.  
+Tähän voi käyttää sovellusta [Cities Skylines Localization Tool](https://forum.paradoxplaza.com/forum/threads/release-cities-skylines-localization-tool.844524/).  
+Samalla sovelluksella saa muutettua myös alkuperäisen `en.locale` tiedoston `en.po` tiedostoksi, kun tulee uusi peliversio.  
 `mergepo.ps1` skriptillä voi yhdistää uudet englanninkieliset kääntämättömät tekstit ja aiemmin käännetyt tekstit yhdeksi `fi_merged.po` tiedostoksi.

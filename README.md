@@ -1,13 +1,13 @@
 # Kielitiedoston asentaminen
-Lataa ja tallenna (`fi.locale`)[https://github.com/hanskurppa/csfi/raw/main/fi.locale] tiedosto kansioon
+Lataa ja tallenna [`fi.locale`](https://github.com/hanskurppa/csfi/raw/main/fi.locale) tiedosto kansioon
 ```
 C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Files\Locale
 ```
 Käynnistä **Launcher** > **Play** > **Options** > **Gameplay** > valitse **Language** = **SUOMI (FINNISH)**
 
 # Käännöksen edistyminen
-Testattu 30.5.2021 versiolla 1.13.3-f9.
-Launcher ei ole käännettävissä suomeksi.
+Testattu 30.5.2021 versiolla 1.13.3-f9.  
+Launcher ei ole käännettävissä suomeksi.  
 MacOS versiossa pitäisi myös toimia kun menee Cities.app > hiirivalikko > Show Package Contents > Files/Locale.
 
 ## Käännetty (4956/13540 37%)  
