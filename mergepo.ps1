@@ -1,0 +1,151 @@
+﻿<#
+    Skripti pyrkii yhdistämään päivitetyn en.locale tiedoston sisällön
+    viimeisimmän suomikäännöksen kanssa.
+
+    Jos päivitetyssä en.localessa on uusia kääntämättömiä kohteita,
+    niiden msgstr jää tyhjäksi ja ne voi kääntää tiedostoon jonka
+    tämä skripti luo.
+
+    locale/po tiedostojen purkamiseen ja pakkaamiseen täytyy käyttää sovellusta
+    Cities Skylines Localization Tool
+    https://forum.paradoxplaza.com/forum/threads/release-cities-skylines-localization-tool.844524/
+
+    Steam-asennuksen oletuskansio kielitiedostoille
+    C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Files\Locale
+
+
+    1. Päivitä Cities uusimpaan versioon
+
+
+    2. Pura päivitetyn version en.locale
+        export
+            locale file = C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Files\Locale\en.locale
+            export path = C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Files\Locale
+        klikkaa export > start
+
+
+    3. Kopioi purettu en.po tämän skriptin kansioon
+
+
+    4. Kopioi viimeisimmän suomikäännöksen po-tiedosto 
+       tämän skriptin kansioon tiedostoksi fi.po
+
+       Jos löytyy vain fi.locale, voit purkaa sen kuten en.locale
+
+
+    5. Suorita tämä skripti
+       Skripti luo tiedoston fi_merged.po
+
+
+    6. Tee uudet käännökset tiedostoon fi_merged.po
+
+
+    7. Pakkaa päivitetty käännös tiedostoksi fi.locale
+        import
+            origin locale = C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Files\Locale\en.locale
+            import pofile = fi_merged.po
+            export path = C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Files\Locale\fi.locale
+            native text = SUOMI
+            english text = (FINNISH)
+        klikkaa import > start
+    
+    8. Käynnistä Cities ja testaa että käännös toimii
+
+    9. Kun teet "käännösluuppia", toista 6-7
+       Localization Tool ikkuna voi olla auki.
+       Riittää että klikkaat import > start, ja pelin käännös päivittyy.
+       Cities voi olla käynnissä, 
+       mutta käy vaihtamassa Asetuksissa kieli ENGLISH ja takaisin SUOMI.
+#>
+
+$EnImportFile = Get-Content -Encoding utf8 -Path (Join-Path $PSScriptRoot "en.po")
+$FiImportFile = Get-Content -Encoding utf8 -Path (Join-Path $PSScriptRoot "fi.po")
+
+<#
+    Esimerkki alkuperäisestä englanninkielisestä tekstistä
+
+    PS> $en[0] | fl
+    
+    msg    : BUILDING_TITLE[Panda Sanctuary]:0
+    msgid  : Panda Sanctuary
+    msgstr :
+#>
+$en = for ($i=0; $i -lt $EnImportFile.count; $i++) {
+    if ($EnImportFile[$i] -cmatch "^#\.\s+`"(.+)`"") {
+		[pscustomobject]@{
+            "msg"    = $Matches[1]
+            "msgid"  = $($EnImportFile[$i+1] -replace '^msgid\s+"','' -replace '"$','')
+            "msgstr" = $($EnImportFile[$i+2] -replace '^msgstr\s+"','' -replace '"$','')
+        }
+    }
+}
+
+<#
+    Esimerkki aiemmin käännetystä tekstistä
+
+    PS> $fi[0] | fl
+
+    msg    : BUILDING_TITLE[Panda Sanctuary]:0
+    msgid  : Panda Sanctuary
+    msgstr : Pandan rauhoitusalue
+
+
+    Esimerkki kääntämättömästä tekstistä
+
+    PS> $fi | ? msgstr -eq "" | select -first 1 | fl
+
+    msg    : BUILDING_TITLE[Liberal Arts Administration 01]:0
+    msgid  : Liberal Arts Administration Building
+    msgstr :
+#>
+$fi = for ($i=0; $i -lt $FiImportFile.count; $i++) {
+    if ($FiImportFile[$i] -cmatch "^#\.\s+`"(.+)`"") {
+        [pscustomobject]@{
+            "msg"    = $Matches[1]
+            "msgid"  = $($FiImportFile[$i+1] -replace '^msgid\s+"','' -replace '"$','')
+            "msgstr" = $($FiImportFile[$i+2] -replace '^msgstr\s+"','' -replace '"$','')
+        }
+    }
+}
+
+$cnt = 0
+$FiMsgCache = $fi.msg | ForEach-Object {@{"$_" = $cnt++}}
+$cnt = 0
+
+$FiMerged = foreach ($i in $en) {
+    Write-Progress -Activity "fi_merged.po [ $($cnt) / $($en.count) ]" -CurrentOperation $i.msg -PercentComplete ((($cnt++) / $en.count) * 100)
+
+    $FiMsg = $null = $fi[$($FiMsgCache."$($i.msg)")]
+
+    if ($FiMsg -and ($FiMsg.msgid -ne $i.msgid)) {
+        [pscustomobject]@{
+            "msg"    = $i.msg
+            "msgid"  = $i.msgid
+            "msgstr" = $FiMsg.msgid
+        }
+    } elseif ($FiMsg -and ($FiMsg.msgstr -ne "")) {
+        [pscustomobject]@{
+            "msg"    = $i.msg
+            "msgid"  = $i.msgid
+            "msgstr" = $FiMsg.msgstr
+        }
+    } else {
+        $i
+    }
+}
+
+$DoneCnt = $FiMerged.count - ($FiMerged | Where-Object msgstr -eq '').count
+$AllCnt = $FiMerged.count
+$DonePct = [math]::round($DoneCnt/$AllCnt*100, 0)
+
+Write-Output "$DoneCnt/$AllCnt $DonePct%"
+
+# Varmuuskopioidaan olemassa oleva
+if (Test-Path (Join-Path $PSScriptRoot "fi_merged.po")) {
+    mkdir (Join-Path $PSScriptRoot "pobackup") -ea 0 -wa 0 | Out-Null
+    Move-Item (Join-Path $PSScriptRoot "fi_merged.po") (Join-Path (Join-Path $PSScriptRoot "pobackup") "fi_merged_$((Get-Date).Ticks.ToString()).po")
+}
+
+foreach ($i in $FiMerged) {
+    "#. ""$($i.msg)""`nmsgid ""$($i.msgid)""`nmsgstr ""$($i.msgstr)""" | Out-File -Force -Append -Encoding utf8 -FilePath (Join-Path $PSScriptRoot "fi_merged.po")
+}
