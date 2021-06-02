@@ -46,9 +46,9 @@
             english text = (FINNISH)
         klikkaa import > start
     
-    8. Käynnistä Cities ja testaa että käännös toimii
+    7. Käynnistä Cities ja testaa että käännös toimii
 
-    9. Kun teet "käännösluuppia", toista 6-7
+    8. Kun teet "käännösluuppia", toista 6-7
        Localization Tool ikkuna voi olla auki.
        Riittää että klikkaat import > start, ja pelin käännös päivittyy.
        Cities voi olla käynnissä, 

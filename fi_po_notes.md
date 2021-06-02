@@ -36,7 +36,7 @@ Englanti | Suomi | Huomiot
 ajatusviiva | `—` | käytä säästeliäästi
 `;` | | älä käytä lainkaan; näyttää rumalta
  | | 
-special goods | erityslaatuista tavaraa | kankea
+special goods | erityislaatuista tavaraa | kankea
 special goods | tavaraa/tavarat | parempi
 special goods | materiaalit | ok
  | | 
