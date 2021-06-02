@@ -3,12 +3,12 @@ Lataa ja tallenna [`fi.locale`](https://github.com/hanskurppa/csfi/raw/main/fi.l
 ```
 C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Files\Locale
 ```
-Käynnistä **Launcher** > **Play** > **Options** > **Gameplay** > valitse **Language** = **SUOMI (FINNISH)**
+Käynnistä **Launcher** > **Play** > **Options** > **Gameplay** > valitse **Language** = **SUOMI (FINNISH)**  
+  
+MacOS versiossa pitäisi myös toimia kun vie tiedoston **Cities.app** > hiirivalikko > **Show Package Contents** > **Files/Locale**
 
 # Käännöksen edistyminen
-Testattu 30.5.2021 versiolla 1.13.3-f9.  
-Launcher ei ole käännettävissä suomeksi.  
-MacOS versiossa pitäisi myös toimia kun menee Cities.app > hiirivalikko > Show Package Contents > Files/Locale.
+Testattu 30.5.2021 versiolla 1.13.3-f9.
 
 ## Käännetty (5056/13450 38%)
 - Kaikki käyttöliittymäelementit, poislukien editorit ja näppäinasetukset
@@ -35,3 +35,4 @@ MacOS versiossa pitäisi myös toimia kun menee Cities.app > hiirivalikko > Show
 - Saavutukset/Achievements — näitä ei ole Steamissakaan suomenkielisenä
 - Lauseke/Legal Disclaimer -tekstit
 - Credits/Tekijät
+- Launcher ei ole käännettävissä suomeksi
