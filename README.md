@@ -10,7 +10,7 @@ MacOS versiossa pitäisi myös toimia kun vie tiedoston **Cities.app** > hiiriva
 # Käännöksen edistyminen
 Testattu 30.5.2021 versiolla 1.13.3-f9.
 
-## Käännetty (5378/13450 40%)
+## Käännetty (5423/13450 40%)
 - Kaikki käyttöliittymäelementit, poislukien editorit ja näppäinasetukset
 - Lähes kaikki pääohjeikkunat (Advisor)
 - Lähes kaikki tietonäkymät, paneelit, tilastot ja politiikat
