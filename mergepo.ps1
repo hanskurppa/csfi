@@ -147,4 +147,4 @@ $ReplaceString = "## Käännetty ($DoneCnt/$AllCnt $DonePct%)"
 
 #(Get-Content -Encoding utf8 -Path (Join-Path $PSScriptRoot "README.md")) |
 #    ForEach-Object {$_ -Replace $SearchRegex, $ReplaceString} |
-#        Set-Content -Encoding utf8 -Path (Join-Path $PSScriptRoot "README.md")
+#        Set-Content -WhatIf -Encoding utf8 -Path (Join-Path $PSScriptRoot "README.md")
