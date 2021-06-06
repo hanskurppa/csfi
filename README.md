@@ -5,7 +5,12 @@ C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Files\Locale
 ```
 Käynnistä **Launcher** > **Play** > **Options** > **Gameplay** > valitse **Language** = **SUOMI (FINNISH)**  
   
-MacOS versiossa pitäisi myös toimia kun vie tiedoston **Cities.app** > hiirivalikko > **Show Package Contents** > **Files/Locale**
+Tiedostopolku Linux-versiossa 
+```
+~/.steam/root/steamapps/common/Cities_Skylines/Files/Locale
+```
+Tiedostopolku MacOS-versiossa  
+**Cities.app** > hiirivalikko > **Show Package Contents** > **Contents** > **Resources** > **Files** > **Locale**
 
 # Käännöksen edistyminen
 Testattu 30.5.2021 versiolla 1.13.3-f9.
