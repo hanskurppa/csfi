@@ -27,6 +27,7 @@
 - http://www.kielitohtori.fi/kaikki_termikysymykset?items_per_page=All
 - http://jkorpela.fi/kielenopas/
 - http://www.av-kaantajat.fi/gallery/laatusuositukset%20taitettu%20ei%20allek.pdf
+- https://www.kaupunkiliikenne.net/Maaritelmia.htm
 - Alkuperäinen SC4 olisi täysin suomeksi, mutta nykyään ei ole saatavilla kuin Deluxe Edition
 - Suomenkielinen SimCity (2013)
 - Suomenkieliset Simsit
