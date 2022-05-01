@@ -60,7 +60,7 @@ Gymnasium | liikuntarakennus | ehkä hieman kankea, mutta "kuntosali" tai "liiku
 Commencement Office | juhlasali | ei oikeasti sama asia, mutta suomenkielessä ei ole "valmistujaissaleja" tai -rakennuksia
 Media Lab | Media Lab | termiä käyttää Suomessa vain Aalto-yliopisto
 School of Engineering | Insinööritieteiden korkeakoulu | termiä käyttää Suomessa vain Aalto-yliopisto
-Liberal Arts | humanistiset tieteet | ei aivan sama asia suomenkielessä, mutta riittävän lähellä
+Liberal Arts | humanistiset tieteet | ei aivan sama asia suomen kielessä, mutta riittävän lähellä
 Futsal Club | pallokerho | oikeampi käännös olisi Futsal-kerho tai ehkä salijalkapallokerho, mutta pelkkä pallokerho kuulostaa paremmalta suomelta
  | | 
 Zone | vyöhyke | kaavoitettu tai asemakaavoitettu
