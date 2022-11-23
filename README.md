@@ -1,5 +1,6 @@
 ﻿# Kielitiedoston asentaminen
-Lataa ja tallenna [`fi.locale`](https://github.com/hanskurppa/csfi/raw/main/fi.locale) tiedosto kansioon
+PÄIVITYS 23.11.2022: GitHub ei tykkää nyt .locale tiedostosta, ei edes zipattuna. Tiedosto jaetaan nyt eri palvelimelta, zipattuna.
+Lataa ja pura [`fi.zip`](https://xn--rb-viab.fi/fi.zip), tallenna `fi.locale` tiedosto kansioon
 ```
 C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Files\Locale
 ```
