@@ -14,7 +14,7 @@ Tiedostopolku MacOS-versiossa
 **Cities.app** > hiirivalikko > **Show Package Contents** > **Contents** > **Resources** > **Files** > **Locale**
 
 # Käännöksen edistyminen
-Testattu 30.5.2021 versiolla 1.13.3-f9.
+Testattu 23.11.2022 versiolla 1.15.1-f4.
 
 ## Käännetty (5457/13450 40%)
 - Kaikki käyttöliittymäelementit, poislukien editorit ja näppäinasetukset
