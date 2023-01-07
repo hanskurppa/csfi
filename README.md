@@ -1,4 +1,5 @@
 ﻿# Kielitiedoston asentaminen
+PÄIVITYS 7.1.2023: Korjattu virheellisiä englanninkielisiä duplikaattitekstejä.
 PÄIVITYS 23.11.2022: GitHub ei tykkää nyt .locale tiedostosta, ei edes zipattuna. Tiedosto jaetaan nyt eri palvelimelta, zipattuna.
 Lataa ja pura [`fi.zip`](https://xn--rb-viab.fi/fi.zip), tallenna `fi.locale` tiedosto kansioon
 ```
