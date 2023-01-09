@@ -1,7 +1,5 @@
 ﻿# Kielitiedoston asentaminen
-PÄIVITYS 7.1.2023: Korjattu virheellisiä englanninkielisiä duplikaattitekstejä.  
-PÄIVITYS 23.11.2022: GitHub ei tykkää nyt .locale tiedostosta, ei edes zipattuna. Tiedosto jaetaan nyt eri palvelimelta, zipattuna.  
-Lataa ja pura [`fi.zip`](https://xn--rb-viab.fi/fi.zip), tallenna `fi.locale` tiedosto kansioon
+Lataa ja pura [`fi-2023-01-09.zip`](https://xn--rb-viab.fi/fi-2023-01-09.zip), tallenna `fi.locale` tiedosto kansioon
 ```
 C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Files\Locale
 ```
@@ -17,7 +15,7 @@ Tiedostopolku MacOS-versiossa
 # Käännöksen edistyminen
 Testattu 7.1.2023 versiolla `1.16.0-f3`.
 
-## Käännetty (5470/15334 36%)
+## Käännetty (5570/15334 36%)
 - Kaikki käyttöliittymäelementit, poislukien editorit ja näppäinasetukset
 - Lähes kaikki pääohjeikkunat (Advisor)
 - Lähes kaikki tietonäkymät, paneelit, tilastot ja politiikat
