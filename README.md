@@ -33,9 +33,9 @@ Testattu 7.1.2023 versiolla `1.16.0-f3`.
 - Editorit
 - Näppäinasetukset
 - Mitä uutta -paneeli
+- Chirpit
 
 ## Kääntämättä - ei työn alla / ei ole tarkoitus kääntää  
-- Chirpit — liian monta käännettäväksi
 - Erisnimet, paikannimet, nimisäännöt
 - Saavutukset/Achievements — näitä ei ole Steamissakaan suomenkielisenä
 - Lauseke/Legal Disclaimer -tekstit
