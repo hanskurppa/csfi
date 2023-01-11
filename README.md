@@ -1,5 +1,5 @@
 ﻿# Kielitiedoston asentaminen
-Lataa ja pura [`fi-2023-01-09.zip`](https://xn--rb-viab.fi/fi-2023-01-09.zip), tallenna `fi.locale` tiedosto kansioon
+Lataa ja tallenna [`fi.locale`](https://github.com/hanskurppa/csfi/raw/main/fi.locale) tiedosto kansioon
 ```
 C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Files\Locale
 ```
