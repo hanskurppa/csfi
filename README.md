@@ -13,10 +13,10 @@ Tiedostopolku MacOS-versiossa
 **Cities.app** > hiirivalikko > **Show Package Contents** > **Contents** > **Resources** > **Files** > **Locale**
 
 # Käännöksen edistyminen
-Testattu 7.1.2023 versiolla `1.16.0-f3`.
+Testattu 26.1.2023 versiolla `1.16.0-f3`.
 
-## Käännetty (5675/15334 37%)
-- Kaikki käyttöliittymäelementit, poislukien editorit ja näppäinasetukset
+## Käännetty (5828/15727 37%)
+- Kaikki käyttöliittymäelementit, poislukien editorit ja näppäinasetukset, paitsi Financial Districts -lisäosa
 - Lähes kaikki pääohjeikkunat (Advisor)
 - Lähes kaikki tietonäkymät, paneelit, tilastot ja politiikat
 - Lähes kaikki kohteiden nimet (title)
