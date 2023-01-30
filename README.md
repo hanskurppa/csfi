@@ -15,8 +15,8 @@ Tiedostopolku MacOS-versiossa
 # Käännöksen edistyminen
 Testattu 26.1.2023 versiolla `1.16.0-f3`.
 
-## Käännetty (5828/15727 37%)
-- Kaikki käyttöliittymäelementit, poislukien editorit ja näppäinasetukset, paitsi Financial Districts -lisäosa
+## Käännetty (5978/15727 38%)
+- Lähes kaikki käyttöliittymäelementit, poislukien editorit ja näppäinasetukset
 - Lähes kaikki pääohjeikkunat (Advisor)
 - Lähes kaikki tietonäkymät, paneelit, tilastot ja politiikat
 - Lähes kaikki kohteiden nimet (title)
