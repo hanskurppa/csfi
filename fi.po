@@ -39868,7 +39868,7 @@ msgstr "Johdinautolinjat"
 #. "INFO_HEALTH_CHILDCARE:0"
 msgid "Childcare"
 msgstr "Lapset ja nuoret"
-#. "INFO_HEALTH_ELDERCARE:0"w
+#. "INFO_HEALTH_ELDERCARE:0"
 msgid "Eldercare"
 msgstr "Vanhustenhuolto"
 #. "INFO_HEALTH_CHILDCARE_CHILDCOUNT:0"
