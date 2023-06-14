@@ -15,7 +15,7 @@ Tiedostopolku MacOS-versiossa
 # Käännöksen edistyminen
 Testattu 14.6.2023 versiolla `1.17.1-f2`.
 
-## Käännetty (6564/16886 39%)
+## Käännetty (6659/16886 39%)
 - Lähes kaikki käyttöliittymäelementit, poislukien editorit ja näppäinasetukset
 - Lähes kaikki pääohjeikkunat (Advisor)
 - Lähes kaikki tietonäkymät, paneelit, tilastot ja politiikat
